@@ -1,5 +1,7 @@
 FROM nginx:latest
-ARG WEBAPP = "/usr/share/nginx/html/"
+Maintainer "Jason H"
 
-WORKDIR web/
-COPY . ${WEBAPP}
+WORKDIR /usr/share/nginx/html/
+COPY /web/. .
+
+EXPOSE 80
